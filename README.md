@@ -21,7 +21,7 @@ Install
 
 - Copy `guacamole-auth-redis-VERSION.jar` into `webapps/guacamole/WEB-INF/lib/`. It does not work if you copy the jar into common/lib/ or shared/lib/.
 
-- Download [redis.jar](https://github.com/xetorthio/jedis/downloads) into `webapps/guacamole/WEB-INF/lib/`.
+- Download [jedis.jar](https://github.com/xetorthio/jedis) into `webapps/guacamole/WEB-INF/lib/`.
 
 
 Configure
