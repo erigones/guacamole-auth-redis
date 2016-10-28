@@ -1,4 +1,4 @@
-package com.erigones.guacamole.net.auth.redis.properties;
+package org.erigones.guacamole.net.auth.properties;
 
 import org.glyptodon.guacamole.properties.IntegerGuacamoleProperty;
 import org.glyptodon.guacamole.properties.StringGuacamoleProperty;

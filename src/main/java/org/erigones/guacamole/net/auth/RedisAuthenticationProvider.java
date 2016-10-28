@@ -1,4 +1,4 @@
-package com.erigones.guacamole.net.auth.redis;
+package org.erigones.guacamole.net.auth;
 
 
 import java.util.Map;
@@ -9,7 +9,7 @@ import java.io.IOException;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
-import com.erigones.guacamole.net.auth.redis.properties.RedisGuacamoleProperties;
+import org.erigones.guacamole.net.auth.properties.RedisGuacamoleProperties;
 import org.glyptodon.guacamole.GuacamoleException;
 import org.glyptodon.guacamole.net.auth.Credentials;
 import org.glyptodon.guacamole.net.auth.simple.SimpleAuthenticationProvider;
@@ -148,5 +148,10 @@ public class RedisAuthenticationProvider extends SimpleAuthenticationProvider {
             // Return empty configuration map since we are already authenticated
             return new HashMap<String, GuacamoleConfiguration>();
         }
+    }
+
+    @Override
+    public String getIdentifier() {
+        return "redis-auth";
     }
 }

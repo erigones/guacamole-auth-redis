@@ -1,0 +1,8 @@
+{
+    "guacamoleVersion": "0.9.9",
+    "name": "Redis Authentication Extension",
+    "namespace": "guacamole-auth-redis",
+    "authProviders": [
+        "org.erigones.guacamole.net.auth.RedisAuthenticationProvider"
+    ]
+}

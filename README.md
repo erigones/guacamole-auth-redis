@@ -1,7 +1,7 @@
 guacamole-auth-redis
 ====================
 
-[Guacamole](http://guac-dev.org/) Redis authentication plugin.
+[Guacamole](http://guac-dev.org/) Redis authentication extension.
 
 
 Build
@@ -27,10 +27,10 @@ Install
 Configure
 ---------
 
-- Edit the Guacamole configuration file (`/etc/guacamole/guacamole.properties`):
+- Edit the Guacamole configuration file (`guacamole.properties`):
 
 		# Auth provider class
-		auth-provider: com.erigones.guacamole.net.auth.redis.RedisAuthenticationProvider
+		auth-provider: org.erigones.guacamole.net.auth.RedisAuthenticationProvider
 
 		# Redis properties
 		redis-host: localhost
