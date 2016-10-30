@@ -59,13 +59,16 @@ public class RedisAuthenticationProvider extends SimpleAuthenticationProvider {
     }
 
     private Map<String, String> getMap(String key) {
-        Jedis jedis = pool.getResource();
+        Jedis jedis = null;
 
         try {
+            jedis = pool.getResource();
             logger.info("Fetching key \"{}\" from redis.", key);
             return jedis.hgetAll(key);
         } finally {
-            pool.returnResource(jedis);
+            if (jedis != null) {
+                jedis.close();
+            }
         }
     }
 
